@@ -1,0 +1,103 @@
+.register {
+    height: 100vh;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: var(--color-white);
+        border-radius: 0.6rem;
+        min-height: 600px;
+        overflow: hidden;
+
+        .left {
+            flex: 1;
+            background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url("../../img/keqing-handx.png");
+            background-size: cover;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+            color: var(--color-white);
+
+            h1 {
+                font-size: 6.25rem;
+                line-height: 6.25rem;
+
+            }
+
+            span {
+                font-size: 0.9rem;
+
+            }
+
+            button {
+                width: 40%;
+                padding: 0.6rem;
+                border: none;
+                background-color: var(--color-white);
+                color: var(--color-purple);
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 1rem;
+                transition: var(--transition);
+
+            }
+
+            button:hover {
+                background-color: var(--color-purple);
+                color: var(--color-white);
+            }
+        }
+
+        .right {
+            flex: 1;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+
+            h1 {
+                color: #555;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                input {
+                    border-bottom: 1px solid lightgray;
+                    padding: 0.5rem 1rem;
+
+                }
+
+                button {
+                    width: 40%;
+                    padding: 0.6rem;
+                    border: none;
+                    background-color: var(--color-purple);
+                    color: var(--color-white);
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 1rem;
+                    transition: var(--transition);
+                    border: 1px solid transparent;
+
+                }
+
+                button:hover {
+                    background-color: var(--color-white);
+                    border: 1px solid var(--color-purple);
+                    color: var(--color-purple);
+                }
+            }
+        }
+    }
+}

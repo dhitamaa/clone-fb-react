@@ -1,0 +1,81 @@
+@import "../../style.scss";
+
+.navbar {
+    @include myTheme($themes) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.63rem 1.25rem;
+        height: 4rem;
+        border-bottom: 0.1rem solid useTheme("border");
+        position: sticky;
+        top: 0;
+        background-color: useTheme("bg");
+        color: useTheme("textColor");
+        z-index: 999;
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            span {
+                font-weight: bold;
+                font-size: 1.3rem;
+                color: useTheme("logo");
+            }
+
+            .search {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                border: 0.1rem solid useTheme("border");
+                border-radius: 2rem;
+                padding: 0.3rem;
+
+                input {
+                    width: 30rem;
+                    background-color: transparent;
+                    color: useTheme(textColor);
+
+                    @include mobile {
+                        display: none;
+                    }
+
+                    @include tablet {
+                        width: 13rem;
+                    }
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            @include mobile {
+                display: none;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 400;
+
+                @include tablet {
+                    display: none;
+                }
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+            }
+        }
+    }
+}

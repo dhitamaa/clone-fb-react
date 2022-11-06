@@ -1,0 +1,16 @@
+@import "../../style.scss";
+
+.home {
+    @include myTheme($themes) {
+        background-color: useTheme("bgSoft");
+        padding: 1.25rem 6rem;
+
+        @include mobile {
+            padding: 1rem;
+        }
+
+        @include tablet {
+            padding: 1.5rem;
+        }
+    }
+}
